@@ -1,1 +1,1 @@
-# 👋 Hi, programming is mostly fun
+hello there ;)
