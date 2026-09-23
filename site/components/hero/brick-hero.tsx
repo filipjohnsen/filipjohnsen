@@ -272,20 +272,22 @@ export function BrickHero() {
             </div>
           )}
 
-          <p aria-live="polite" className="mt-2 min-h-6 text-base text-ink-soft">
-            <AnimatePresence mode="wait" initial={false}>
-              <m.span
-                key={phase}
-                initial={{ opacity: 0, y: 6 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -6 }}
-                transition={{ duration: 0.18 }}
-                className="inline-block"
-              >
-                <Status phase={phase} placed={placed} />
-              </m.span>
-            </AnimatePresence>
-          </p>
+          {!reduced && (
+            <p aria-live="polite" className="mt-2 min-h-6 text-base text-ink-soft">
+              <AnimatePresence mode="wait" initial={false}>
+                <m.span
+                  key={phase}
+                  initial={{ opacity: 0, y: 6 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.18 }}
+                  className="inline-block"
+                >
+                  <Status phase={phase} placed={placed} />
+                </m.span>
+              </AnimatePresence>
+            </p>
+          )}
 
           <a
             href="#sett"

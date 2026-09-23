@@ -7,7 +7,7 @@ const difficultyLabel = ["", "lett", "middels", "vrien"];
 
 function Difficulty({ level }: { level: LabSet["difficulty"] }) {
   return (
-    <span className="flex items-center gap-[4px]" aria-label={`Vanskelighetsgrad: ${difficultyLabel[level]}`}>
+    <span role="img" className="flex items-center gap-[4px]" aria-label={`Vanskelighetsgrad: ${difficultyLabel[level]}`}>
       {[1, 2, 3].map((n) => (
         <span
           key={n}

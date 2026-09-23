@@ -20,7 +20,7 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="relative border-b-2 border-ink p-2" style={{ background: brickColor(project.color) }}>
         <div className="flex items-start justify-between">
           <span className="rounded-md bg-paper px-1 py-0.5 font-mono text-xs font-semibold">Sett {project.set}</span>
-          <span className="font-mono text-xs text-paper mix-blend-difference">{project.year}</span>
+          <span className="rounded-md bg-ink/80 px-1 py-0.5 font-mono text-xs text-paper">{project.year}</span>
         </div>
         <div className="mx-auto mt-1 max-w-[420px]">
           <BlockArt seed={project.title} />
